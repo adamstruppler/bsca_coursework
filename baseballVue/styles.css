@@ -1,0 +1,17 @@
+.playerInfo{
+    border: 5px solid black;
+    text-align: center;
+    background-color: #3498db;
+    width: 50%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 5px
+}
+
+.playerInfo img {
+    max-width: 50%;
+    border-radius: 5px;
+}
