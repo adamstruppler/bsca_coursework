@@ -35,10 +35,10 @@ const baseballPlayers = [
   // 2) Use map or filter to return an array of only players that play for the Cleveland Indians(Only one giving me issues)
 
   const printPlayers = baseballPlayers.map((player) => {
-    return player.name  && player.team === 'Cleveland'
+    return player.name  && player.team === 'Cleveland Indians'
   })
   
-  // console.log(printPlayers)
+  console.log(printPlayers)
 
   // 3) Use map or filter to return an array full of objects with only the players name and team.
   //  examples -> [ { name: "Barry Bonds", team: "San Francisco Giants" }, { name: "Hank Aaron", team: "Atlanta Braves"}, etc..]
@@ -84,4 +84,4 @@ const baseballPlayers = [
       return `${player.name} played for the ${player.team} and had ${player.HR} homeruns`
     })
 
-    console.log(playerInfo)
+    // console.log(playerInfo)
