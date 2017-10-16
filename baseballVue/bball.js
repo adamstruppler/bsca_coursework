@@ -32,13 +32,13 @@ const baseballPlayers = [
 
   // console.log(printNames)
   
-  // 2) Use map or filter to return an array of only players that play for the Cleveland Indians(Only one giving me issues)
+  // 2) Use map or filter to return an array of only players that play for the Cleveland Indians
 
-  const printPlayers = baseballPlayers.map((player) => {
-    return player.name  && player.team === 'Cleveland Indians'
+  const printPlayers = baseballPlayers.filter((player) => {
+    return player.team === 'Cleveland Indians'
   })
   
-  console.log(printPlayers)
+  // console.log(printPlayers)
 
   // 3) Use map or filter to return an array full of objects with only the players name and team.
   //  examples -> [ { name: "Barry Bonds", team: "San Francisco Giants" }, { name: "Hank Aaron", team: "Atlanta Braves"}, etc..]
@@ -68,11 +68,21 @@ const baseballPlayers = [
   
   // 6) Use filter or map to return an array of Cleveland Indian Players with HRs greater than 575
 
+    const greaterThanHr = baseballPlayers.filter((player) => {
+      return player.team === 'Cleveland Indians' && player.HR > 575
+    })
 
+    // console.log(greaterThanHr)
   
   // 7) Use Filter & Map to return an array of just the Names of the Cleveland Indian Players with HR's greater than 575.
   
+    const greaterThan = baseballPlayers.filter((player) => {
+      return player.team === 'Cleveland Indians'
+    }).map(i => {
+      return i.HR > 575
+    })
 
+    console.log(greaterThan)
 
   // 8) Use Filter or Map to return an array full of sentences that match the following examples:
   // examples -> [
