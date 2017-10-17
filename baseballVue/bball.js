@@ -21,7 +21,6 @@ const baseballPlayers = [
     { name: "Chipper Jones", HR: 468, team: "Atlanta Braves", img: "https://upload.wikimedia.org/wikipedia/commons/4/40/Chipper_jones_4-18-12.jpg"},
     ];
   
-  
   // 1) Use map or filter to return an array of baseball player names.
   // examples -> ["Barry Bonds", "Hank Aaron", "Babe Ruth", etc..]
 
@@ -56,12 +55,13 @@ const baseballPlayers = [
      console.log(arr[i].HR)
     }
 
-    // playerAverage(baseballPlayers)
+  //  playerAverage(baseballPlayers) 
   
-  // 5) Use map or filter to return an array of only the baseball players first names(only getting first letter)
+  // 5) Use map or filter to return an array of only the baseball players first names
+    // Couldnt get this one
 
     const firstNames = baseballPlayers.map((player) => {
-      return player.name[0]
+      return player.name.split(' ')[0]
     })
 
     // console.log(firstNames)
@@ -75,14 +75,14 @@ const baseballPlayers = [
     // console.log(greaterThanHr)
   
   // 7) Use Filter & Map to return an array of just the Names of the Cleveland Indian Players with HR's greater than 575.
-  
+
     const greaterThan = baseballPlayers.filter((player) => {
-      return player.team === 'Cleveland Indians'
+      return player.team === 'Cleveland Indians' && player.HR > 575
     }).map(i => {
-      return i.HR > 575
+      return {Players: i}
     })
 
-    console.log(greaterThan)
+    // console.log(greaterThan)
 
   // 8) Use Filter or Map to return an array full of sentences that match the following examples:
   // examples -> [
