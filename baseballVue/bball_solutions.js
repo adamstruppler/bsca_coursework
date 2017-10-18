@@ -21,32 +21,32 @@ const baseballPlayers = [
     { name: "Chipper Jones", HR: 468, team: "Atlanta Braves", img: "https://upload.wikimedia.org/wikipedia/commons/4/40/Chipper_jones_4-18-12.jpg"},
     ];
   
+  
   // 1) Use map or filter to return an array of baseball player names.
   // examples -> ["Barry Bonds", "Hank Aaron", "Babe Ruth", etc..]
 
   const printNames = baseballPlayers.map((player) => {
-    return player.name
+      return player.name
+  })
+ 
+//   console.log(printNames)
+
+  // 2) User map or filter to return an array of only players that play for the Cleveland Indians
+
+  const printTeam = baseballPlayers.map((player) => {
+      return player.team === 'Cleveland Indians'
   })
 
-
-  // console.log(printNames)
+//   console.log(printTeam)
   
-  // 2) Use map or filter to return an array of only players that play for the Cleveland Indians
-
-  const printPlayers = baseballPlayers.filter((player) => {
-    return player.team === 'Cleveland Indians'
-  })
-  
-  // console.log(printPlayers)
-
   // 3) Use map or filter to return an array full of objects with only the players name and team.
   //  examples -> [ { name: "Barry Bonds", team: "San Francisco Giants" }, { name: "Hank Aaron", team: "Atlanta Braves"}, etc..]
   
-  const printNameAndTeam = baseballPlayers.map((player) => {
-    return {name: player.name , team: player.team}
+  const printTeamAndName = baseballPlayers.map((player) => {
+      return {name: player.name , team: player.team}
   })
 
-  // console.log(printNameAndTeam)
+//   console.log(printTeamAndName)
 
   // 4) Create a function that returns the average of all players HR (for loop)
 
@@ -55,39 +55,36 @@ const baseballPlayers = [
       for(let i = 0; i < arr.length; i++) {
         totalRuns += arr[i].HR
       }  
-      return totalRuns   
+      return totalRuns / arr.length  
     }
 
     // console.log(playerAverage(baseballPlayers))
-
-  //  playerAverage(baseballPlayers) 
   
   // 5) Use map or filter to return an array of only the baseball players first names
-    // Couldnt get this one
 
-    const firstNames = baseballPlayers.map((player) => {
+  const firstName = baseballPlayers.map((player) => {
       return player.name.split(' ')[0]
-    })
+  })
 
-    // console.log(firstNames)
+//   console.log(firstName)
   
   // 6) Use filter or map to return an array of Cleveland Indian Players with HRs greater than 575
-
-    const greaterThanHr = baseballPlayers.filter((player) => {
-      return player.team === 'Cleveland Indians' && player.HR > 575
-    })
-
-    // console.log(greaterThanHr)
   
-  // 7) Use Filter & Map to return an array of just the Names of the Cleveland Indian Players with HR's greater than 575.
-
-    const greaterThan = baseballPlayers.filter((player) => {
+  const greatThanPlayers = baseballPlayers.filter((player) => {
       return player.team === 'Cleveland Indians' && player.HR > 575
-    }).map(i => {
-      return {Players: i}
-    })
+  })
 
-    // console.log(greaterThan)
+//   console.log(greatThanPlayers)
+
+  // 7) Use Filter & Map to return an array of just the Names of the Cleveland Indian Players with HR's greater than 575.
+  
+   const greatThan = baseballPlayers.filter((player) => {
+       return player.team === 'Cleveland Indians' && player.HR > 575
+   }).map (i => {
+       return i.name
+   })
+
+//    console.log(greatThan)
 
   // 8) Use Filter or Map to return an array full of sentences that match the following examples:
   // examples -> [
@@ -95,8 +92,8 @@ const baseballPlayers = [
   //  "Hank Aaron played for the Braves and had 755 homeruns",
   //  "Babe Ruth played for the Yankees and had 714 homeruns",]
 
-    const playerInfo = baseballPlayers.map((player) => {
-      return `${player.name} played for the ${player.team} and had ${player.HR} homeruns`
-    })
+  const playerInfo = baseballPlayers.map((player) => {
+    return `${player.name} played for the ${player.team.split(' ')[1]} and had ${player.HR} homeruns`
+  })
 
-    // console.log(playerInfo)
+//   console.log(playerInfo)
