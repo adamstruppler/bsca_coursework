@@ -76,4 +76,4 @@ const newRecipe = (numRecipes) => {
     return result
 }
 
-console.log(newRecipe(20))
+console.log(newRecipe(10))
