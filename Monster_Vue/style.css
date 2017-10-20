@@ -1,0 +1,27 @@
+.monsters-container {
+    display: flex;
+    align-items: center;
+    border: 4px solid orange;
+    flex-wrap: wrap;
+}
+
+.monsters-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc(33% - 10px);
+    height: 25px;
+    margin-left: calc(33% - 10px);
+    margin-right: calc(33% - 10px);
+    margin-top: 5em;
+    margin-bottom:5em;
+    border: 4px solid black;
+}
+
+.myJumbo {
+    text-align: center;
+    background-color: black;
+    font-family: 'Creepster', cursive;
+    font-size: 110;
+}
