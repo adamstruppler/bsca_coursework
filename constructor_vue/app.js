@@ -20,9 +20,6 @@ const walkingDeadVue = {
     data: {
         title: 'Dead Teams',
         walkingDead: walkingDead,
-        newWalkingDeadName: '',
-        newWalkingDeadTeam: [],
-        newWalkingDeadImg: ''
     },
     
 }
