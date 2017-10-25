@@ -20,7 +20,9 @@ const walkingDeadVue = {
     data: {
         title: 'Dead Teams',
         walkingDead: walkingDead,
+        
     },
     
 }
 
+new Vue(walkingDeadVue)
